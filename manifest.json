@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "lecture transcripter",
+    "version": "0.1.0",
+    "description":"transcribing lecture audio into text",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "https://docs.google.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action":{
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+
+
+
+
+}
